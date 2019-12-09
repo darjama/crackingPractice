@@ -1,0 +1,13 @@
+/*  Arrays & Strings
+*   Is Unique:  Implement an algoruth to determin if a string has all unique characters. 
+*   What if you cannot use additional data structures?
+*/
+
+function isUnique(string){
+  for (var i = 0; i < string.length; i++) {
+    if (string.lastIndexOf(string.charAt(i) !== i) {
+      return false;
+    }
+  }
+  return true;
+}
