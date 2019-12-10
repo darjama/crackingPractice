@@ -1,5 +1,5 @@
 /*  Arrays & Strings
-*   Is Unique:  Implement an algoruth to determin if a string has all unique characters. 
+*   1.1 Is Unique:  Implement an algorithm to determine if a string has all unique characters. 
 *   What if you cannot use additional data structures?
 */
 
@@ -10,4 +10,21 @@ function isUnique(string){
     }
   }
   return true;
+}
+
+//1.2 Check Permutation: Given two strings, write a method to decide if one is a permutation of the other
+
+function checkPermutation(string1, string2) {
+  var stringCheck = string2;
+  for (var i = 0; i < string1.length; i ++) {
+    var charI = stringCheck.indexOf(string1.charAt(i);
+    if (charI < 0) {
+      return false;
+    }
+    stringCheck = stringCheck.slice(0, charI) + stringCheck.slice(charI);
+  }
+  if (stringCheck.length === 0) {
+  return true;
+  }
+  return false;
 }
